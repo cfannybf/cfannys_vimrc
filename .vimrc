@@ -16,3 +16,6 @@ let g:indentLine_char = '.'
 set nu
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Remove trailing whitespaces on :w
+autocmd BufWritePre * %s/\s\+$//e
